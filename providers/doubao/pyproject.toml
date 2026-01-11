@@ -1,0 +1,27 @@
+[project]
+name = "amplifier-module-provider-doubao"
+version = "0.1.0"
+description = "Doubao provider module for Amplifier"
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "Amplifier Team" },
+]
+dependencies = [
+    "amplifier-core",
+    "httpx",
+    "pydantic",
+]
+
+[project.entry-points."amplifier.modules"]
+provider-doubao = "amplifier_module_provider_doubao:module"
+
+[build-system]
+requires = [
+    "hatchling",
+]
+build-backend = "hatchling.build"
+
+[tool.uv]
+package = true
